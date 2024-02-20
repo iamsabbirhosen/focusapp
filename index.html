@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap" rel="stylesheet">
+    <title>Challenge Instruction</title>
+    <style>
+        body {
+            font-family: "Anek Bangla", sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        P {
+            font-family: "Anek Bangla", sans-serif;
+        }
+
+        .tabs-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab.active {
+            display: block;
+        }
+
+        .tab-content {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .tab-btns {
+            display: flex;
+            justify-content: space-between;
+            background-color: #4722a5;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px 0;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            background-color: #5d3ab8;
+        }
+
+        @media screen and (max-width: 600px) {
+            .tab-btns {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                flex: none;
+                width: 100%;
+            }
+
+            .tabs-container {
+                margin-top: 0px;
+            }
+        }
+
+        .text-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 50%;
+            margin-top: 10px;
+
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4722a5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5d3ab8;
+        }
+
+        .social-media-list {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .social-media-list li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .social-media-link {
+        color: #333;
+        text-decoration: none;
+        font-size: 24px;
+        transition: color 0.3s;
+    }
+
+    .social-media-link:hover {
+        color: #4722a5;
+    }
+    .challenge-page{
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="tabs-container">
+        <div class="tab-btns">
+            <div class="tab-btn" onclick="openTab(event, 'tab1')">কেন আমাদের এই আয়োজন?</div>
+            <div class="tab-btn" onclick="openTab(event, 'tab2')">কিভাবে চ্যালেঞ্জ নিবে?</div>
+            <div class="tab-btn" onclick="openTab(event, 'tab3')">চ্যালেঞ্জ জয়ীদের করণীয়?</div>
+            <div class="tab-btn" onclick="openTab(event, 'tab4')">আলটিমেট মিশন?</div>
+
+        </div>
+        <div id="tab1" class="tab active">
+            <div class="tab-content">
+                <h3>প্রিয় শিক্ষার্থী,</h3>
+                <p>সালাম নিও মেসনের পক্ষ থেকে। সময় কখনো কারোও জন্য অপেক্ষা করে না। যেমন করেনি তোমাদের মেসনের
+                    ভাইয়া/আপুদের জন্য, তোমার পূর্বের ব্যাচের সিনিয়রদের জন্য। তাই তুমি কিংবা আমি,আমরা আমাদের সময়ের মূল্য
+                    না বুঝলেও ফেসবুক, ইউটিউব, টিকটক, ইন্সটাগ্রাম কিংবা এজাতীয় সোশ্যাল মিডিয়া প্লাটফর্মগুলো কিংবা গেইম
+                    নির্মাতা প্রতিষ্ঠানগুলো কিন্তু ঠিকই বুঝে সময়ের মূল্য; তাই কোটি কোটি টাকার বিনিময়ে সামান্য সস্তা
+                    ডোপামিন নিঃসরণ করিয়ে তোমার, আমার কিংবা আমাদের থেকে তা কিনে নিচ্ছে তারা। আমরা কি বোকা তাইনা? তুমি,
+                    আমি কিংবা আমরা যাকেই বলনা কেন, আমরা সবাই নিশ্চিত এ ব্যাপার জানি, কেবলমাত্র এসব ইলেকট্রনিক্স
+                    ডিভাইসগুলো কিভাবে আমাদের পড়ালেখা কিংবা কোন ভালো কাজের সামনে বাঁধা হয়ে দাড়াচ্ছে। কিভাবে আমাদের
+                    প্রোডাকটিভিটিকে ধূলিসাৎ করে দিচ্ছে! আমরা হারিয়ে ফেলছি আমাদের ফোকাসড মাইন্ডসেট! তোমাদের সেই সমস্যাকে
+                    সামান্য হলেও দূর করতে আমাদের এই প্রচেষ্টা।</p>
+                <p>এই চ্যালেঞ্জে যেভাবে অংশ নেবে তা জানতে <strong>কিভাবে চ্যালেঞ্জ নিবে?</strong> অংশে ক্লিক করো!</p>
+                <p>চ্যালেঞ্জ পেইজে যেতে <strong>আলটিমেট মিশন</strong> ট্যাব থেকে <strong>"চ্যালেঞ্জ পেইজে যাও"</strong> বাটনে ক্লিক করো।</p>
+            </div>
+        </div>
+        <div id="tab2" class="tab">
+            <div class="tab-content">
+                <p>আমাদের এই চ্যালেঞ্জটি মোট ৩ ঘন্টার। চ্যালেঞ্জ সম্পর্কে পুরোপুরি জানার পর তোমরা <strong>চ্যালেঞ্জ
+                        পেইজে যাও</strong> বাটনে ক্লিক করে চ্যালেঞ্জ পেইজে চলে যাবে। চ্যালেঞ্জটি হলো ৩ ঘন্টা ডিসট্রাকশন
+                    ফ্রি ভাবে পড়তে পারা এবং একইসাথে ৩ ঘন্টার জন্য হলেও নিজের মোবাইল ফোন থেকে দূরে থাকা। অতএব,</p>
+                <ul>
+                    <li>প্রথমে মনস্থির করো এবং তৈরী হয়ে যাও চ্যালেঞ্জ নেবার জন্যে।</li>
+                    <li>মনে রাখবে, চ্যালেঞ্জ শুরু হবার পর কোনভাবেই আর ব্রাউজার মিনিমাইজ কিংবা ট্যাব ক্লোজ কিংবা অন্য কোন
+                        ট্যাব ওপেন করা যাবে না। মোদ্দাকথা, তোমাকে চ্যালেঞ্জ পেইজেই থাকতে হবে যতক্ষণ না চ্যালেঞ্জটি শেষ
+                        হবে।</li>
+                    <li>প্রতি ৩০ মিনিট পরপর তুমি ৫ মিনিটের একটি বিরতি পাবে, সেই সময়ে আমাদের পরামর্শ যথেষ্ট পরিমান পানি
+                        পান করে নাও।</li>
+                    <li>চ্যালেঞ্জ চলাকালীন সময়ে তোমার মোবাইলের স্ক্রিণ অটোমেটিক্যালিই অলয়েজ অন থাকবে, তোমার বন্ধ করবার
+                        প্রয়োজন নেই।</li>
+                    <li>প্রয়োজনীয় সকল ম্যাটেরিয়েলস হাতের কাছে রাখো যাতে সময় অপচয় না হয়, এবং পুরো চ্যালেঞ্জ জুড়ে
+                        প্রোডাকটিভ থাকতে পারো।</li>
+                    <li>মনে রাখবে, নিজের কাছে সৎ থাকতে পারার চাইতে আনন্দ অন্য কিছুতে নেই।</li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab3" class="tab">
+            <div class="tab-content">
+                <p>চ্যালেঞ্জ জয়ী হবার পরে, তোমার আনন্দ আমাদের সাথে শেয়ার করার পালা। এবং আমাদের মাঝে শেয়ার করার পরই তুমি
+                    যোগ্য হবে আমাদের মূল প্রতিযোগিতায়। চ্যালেঞ্জ সমাপ্তের পর একটি স্ক্রিণশট নাও, এবং সেটি পোস্ট করো
+                    আমাদের ফেসবুক গ্রুপে। তোমাদের মধ্য থেকে সবচেয়ে বেশি কমেন্ট পাওয়া পোস্টটিকে বিজয়ী হিসেবে ঘোষণা করা
+                    হবে এবং বিজয়ী ব্যক্তি পাবে <strong>মেসনের</strong> পক্ষ থেকে আকর্ষণীয় পুরষ্কার। পোষ্ট করার নিয়মঃ</p>
+                <ul>
+                    <li>প্রথমেই চ্যালেঞ্জ সমাপ্তের পর একটি স্ক্রিণশট নাও, সেটি পোষ্ট করো <strong>মেসনের</strong> ফেসবুক
+                        গ্রুপে।</li>
+                    <li>পোষ্টের ক্যাপশনে নিজের হ্যাশট্যাগ গুলো ইউজ করো।
+                        <div class="text-container">
+                            <p>"আমিই মেসনিয়ান ৩ ঘন্টা নন-স্টপ রিডিং চ্যালেঞ্জ - আমার আপডেট"</p>
+                            <p>#Amii_Mesonian</p>
+                            <p>#3_hours_reading_challenge</p>
+                            <p>#আমিই_মেসনিয়ান</p>
+                            <p>#৩_ঘন্টার_পড়ার_চ্যালেঞ্জ</p>
+                            <p>#মেসনের_সাথে_প্রত্যহী_হতে_আমি_তৈরী</p>
+                            <button onclick="copyText()">হ্যাশট্যাগ কপি করো</button>
+                        </div>
+                    </li>
+                    <li>একজন যতখুশি তত পোস্ট করতে পারবে, তবে একই চ্যালেঞ্জ দিয়ে বারবার পোস্ট করা যাবে না।</li>
+                    <li>যার পোষ্টে যত বেশি কমেন্ট থাকবে তাকেই বিজয়ী ঘোষণা করা হবে।</li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab4" class="tab">
+            <div class="tab-content">
+                <p>আমাদের আলটিমেট মিশন হলো তোমাকে তোমার মোবাইল থেকে কিছুটা সময়ের জন্য হলেও দূরে রাখা এবং ৩ ঘন্টা
+                    ডিসট্রাকশন ফ্রি ভাবে পড়তে সহায়তা করা। তুমি চাইলে এই চ্যালেঞ্জটি বারবার নিয়ে তোমার একেকটি সাব্জেক্ট
+                    এর পড়া শেষ করে ফেলতে পারো। তোমার জন্য শুভ কামনা।</p>
+                    <ul class="social-media-list">
+                        <li><a href="https://www.facebook.com/groups/476602407315903" class="social-media-link" target="_blank">Facebook Group</a></li>
+                        <li><a href="https://www.facebook.com/mesonadmission" class="social-media-link" target="_blank">Facebook Page</a></li>
+                        <li><a href="https://www.youtube.com/@mesonacademy" class="social-media-link" target="_blank">YouTube Channel</a></li>
+                    </ul>
+                    <a href="challenge/challenge.html"><button class="challenge-page">চ্যালেঞ্জ পেইজ যাও</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Open the first tab by default
+        document.getElementById("tab1").style.display = "block";
+
+
+        function copyText() {
+            const textContainer = document.querySelector('.text-container');
+            const range = document.createRange();
+            range.selectNode(textContainer);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Text copied to clipboard!');
+        }
+    </script>
+</body>
+
+</html>

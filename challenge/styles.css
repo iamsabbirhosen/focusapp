@@ -1,0 +1,184 @@
+body {
+  font-family: Anek Bangla, sans-serif;
+  background-color: #4722a5;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#countdown {
+  font-size: 72px;
+  margin-bottom: 20px;
+  color: #ffd700; /* Golden yellow */
+}
+@keyframes borderAnimation {
+0% { border-color: #ffd700; } /* Initial color */
+25% { border-color: #32cd32; } /* Lime green */
+50% { border-color: #ff6347; } /* Tomato red */
+75% { border-color: #4682b4; } /* Steel blue */
+100% { border-color: #ffd700; } /* Back to initial color */
+}
+
+@media only screen and (max-width: 600px) {
+#countdown {
+    font-size: 36px;
+}
+
+#startButton {
+    font-size: 14px;
+}
+
+.status-message {
+    font-size: 18px;
+}
+
+.img {
+    width: 80px; /* Adjust image size for smaller screens */
+    height: 80px; /* Adjust image size for smaller screens */
+}
+}
+
+
+#countdown {
+font-size: 72px;
+margin-bottom: 20px;
+color: #ffd700; /* Golden yellow */
+border: 10px solid;
+border-radius: 10px;
+animation: borderAnimation 10s linear infinite; /* Adjust duration and timing function as needed */
+padding: 20px;
+}
+
+#startButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd700;
+  color: #4722a5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#startButton:hover {
+  background-color: #d4af37; /* Darker golden yellow */
+}
+.status-message {
+  font-size: 10px;
+  margin-top: 20px;
+}
+.img{
+  width: 100px;
+  height: 100px;
+}
+footer{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgb(0, 0, 0);
+}
+
+#marquee {
+  font-family: 'Anek Bangla', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Adjust width as needed */
+  margin: 0 auto; /* Center horizontally */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+#marquee p {
+  display: inline-block; /* Ensure each paragraph is displayed inline */
+  margin-right: 50px; /* Adjust spacing between paragraphs */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: marqueeAnimation 10s linear infinite; /* Apply animation */
+}
+
+@keyframes marqueeAnimation {
+  0% { transform: translateX(100%); } /* Start position */
+  100% { transform: translateX(-100%); } /* End position */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Basic button styles */
+button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #4722a5; /* Your favorite color */
+color: white;
+font-size: 16px;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+transition: all 0.3s ease;
+}
+
+/* Additional styles for specific button types */
+button.btn-info {
+background-color: #4722a5; /* Info color */
+color: rgb(255, 255, 255);
+margin-top: 5px;
+}
+
+/* Button hover effect */
+button::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 300%;
+height: 300%;
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+transition: all 0.6s ease;
+transform: translate(-50%, -50%);
+z-index: 0;
+}
+
+button:hover::before {
+width: 0;
+height: 0;
+}
+
+#dateTimeDisplay {
+  margin: 10px;
+  font-size: 20px;
+}

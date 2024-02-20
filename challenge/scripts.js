@@ -31,7 +31,7 @@ if ('wakeLock' in navigator) {
   function displayEndDateTime() {
     const endTime = new Date(Date.now() + timeLeft * 1000);
     const endDateString = `${endTime.toLocaleDateString()} ${endTime.toLocaleTimeString()}`;
-    document.getElementById('endDateTime').textContent = `Challenge ends on: ${endDateString}`;
+    document.getElementById('endDateTime').textContent = `Challenge ends on: ${endDateString} - 3`;
 }
 
   // Release the wake lock when the challenge ends
